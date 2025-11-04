@@ -15,25 +15,8 @@ Overview
 - Deliverables: processed CSVs in `data/processed/` and PNG figures in `figures/`.
 
 Executive Summary
---------------------------------
-This project converts Northwind order lines into executive‑ready KPIs and visuals suitable for day‑to‑day decision making. Using the included processed sample (Jan–Jun 2006), here are the headline takeaways and recommended actions:
-
-- Key findings (sample window)
-  - Seasonality: strong revenue spike in March–April relative to Jan–Feb, then a sharp dip in May, partial recovery in June. See `figures/monthly_revenue.png` and `figures/monthly_revenue_ma.png`.
-  - AOV outlier: March shows the highest Average Order Value (~$4,076), indicating either larger baskets or higher‑priced items in that month. See `data/processed/kpi_aov_by_month.csv` and `figures/monthly_revenue.png` for context.
-  - Revenue concentration: the Top‑10 customers account for ~91% of revenue in this sample; CustomerID 28 is the largest contributor. See `data/processed/kpi_top_customers.csv` and `figures/top_customers.png`.
-  - Product mix: “Northwind Traders Coffee” is the leading product (~$29.9k), with a long tail across other staples (Beer, Marmalade, Mozzarella). See `data/processed/kpi_top_products.csv` and `figures/top_products.png`.
-  - Patterns to explore: weekday revenue (pivot) and top‑5 products per month suggest operational rhythms and mix shifts; inspect `figures/revenue_by_weekday.png` and `figures/monthly_top5_products_area.png`.
-
-- Recommendations
-  - Customer focus: prioritize retention/cross‑sell for the Top‑10 customers (high concentration risk); build watchlists and outreach cadences.
-  - Inventory and promo planning: ensure availability and promotional support for the top products (especially Coffee) ahead of seasonal peaks.
-  - Capacity planning: staff and stock ahead of March–April; monitor post‑peak months for demand normalization.
-  - Pricing/discount checks: review discounting vs. realized line value (`figures/discount_vs_linevalue.png`) to confirm margin discipline.
-
-Notes
-- The above reflects the included CSV snapshot (Jan–Jun 2006). Running the ETL against a different Northwind instance may change exact figures while preserving the same workflow and visuals.
-- All charts are reproducible from `northwind_analysis.ipynb` or `northwind_analysis.py`; refreshed outputs are saved to `figures/` and `data/processed/`.
+---------------------------------
+For consolidated key findings, decisions, and recommendations, see the memo: `Business Insights/Insights Memo - Northwind Sales Analysis.md`.
 
 Power BI Report
 --------------------------------
